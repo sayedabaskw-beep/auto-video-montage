@@ -1,37 +1,25 @@
-const form = document.getElementById("uploadForm");
-const status = document.getElementById("status");
-const resultBox = document.getElementById("resultBox");
-const resultVideo = document.getElementById("resultVideo");
-const downloadLink = document.getElementById("downloadLink");
+const scene = document.querySelector('.scene');
+const model = document.querySelector('.product-model');
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
+if (scene && model) {
+  scene.addEventListener('pointermove', (event) => {
+    const rect = scene.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
 
-  const formData = new FormData(form);
+    model.style.transform = `rotateX(${(-y * 22).toFixed(2)}deg) rotateY(${(x * 28).toFixed(2)}deg)`;
+  });
 
-  status.textContent = "جاري تجهيز الملفات والدمج...";
+  scene.addEventListener('pointerleave', () => {
+    model.style.transform = 'rotateX(-18deg) rotateY(0deg)';
+  });
+}
 
-  try {
-    const response = await fetch("/api/merge", {
-      method: "POST",
-      body: formData
-    });
+const cards = document.querySelectorAll('.product-card');
 
-    const data = await response.json();
-
-    if (!response.ok || !data.success) {
-      status.textContent = data.message || "حدث خطأ أثناء المعالجة.";
-      return;
-    }
-
-    status.textContent = "تمت معالجة الفيديو بنجاح. يمكنك معاينة النتيجة.";
-    resultBox.classList.remove("hidden");
-    resultVideo.src = data.url;
-    downloadLink.href = data.url;
-    downloadLink.textContent = "تحميل الفيديو النهائي";
-    resultVideo.play();
-  } catch (error) {
-    console.error(error);
-    status.textContent = "فشل الاتصال بالخادم. تأكد من تشغيل المشروع.";
-  }
+cards.forEach((card) => {
+  card.addEventListener('mouseenter', () => {
+    cards.forEach((item) => item.classList.remove('active'));
+    card.classList.add('active');
+  });
 });

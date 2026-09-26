@@ -3,44 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>مونتاج تلقائي</title>
+    <title>3DLab | المنتجات ثلاثية الأبعاد</title>
+    <meta
+      name="description"
+      content="3DLab متجر احترافي للمنتجات ثلاثية الأبعاد بتصميم حديث وتجربة فريدة."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <div class="card">
-        <div class="header">
-          <p class="eyebrow">Video Automation</p>
-          <h1>منصة المونتاج التلقائي</h1>
+    <div class="page-bg"></div>
+
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">3D</div>
+          <span>3DLab</span>
         </div>
 
-        <form id="uploadForm" class="upload-form">
-          <div class="field">
-            <label for="logo">اللوجو (Logo)</label>
-            <input id="logo" name="logo" type="file" accept="image/*" required />
+        <nav class="nav">
+          <a href="#home">الرئيسية</a>
+          <a href="#catalog">المنتجات</a>
+          <a href="#features">المميزات</a>
+          <a href="#contact">تواصل</a>
+        </nav>
+
+        <button class="cta-btn">اطلب الآن</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero container">
+        <div class="hero-copy">
+          <span class="tag">منتجات ثلاثية الأبعاد</span>
+          <h1>ابتكار ملموس في كل تفاصيل المنتج.</h1>
+          <p>
+            3DLab يقدم لك مجموعات تصميمية ثلاثية الأبعاد بأسلوب عصري، مصممة
+            للعرض والتخصيص والهوية البصرية القوية.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#catalog" class="primary-btn">تصفح المنتجات</a>
+            <a href="#contact" class="ghost-btn">تواصل معنا</a>
           </div>
 
-          <div class="field">
-            <label for="intro">الفيديو التعريفي (Intro)</label>
-            <input id="intro" name="intro" type="file" accept="video/*" required />
+          <div class="stats">
+            <div>
+              <strong>1200+</strong>
+              <span>منتج مُصمم</span>
+            </div>
+            <div>
+              <strong>4.9</strong>
+              <span>تقييم العملاء</span>
+            </div>
+            <div>
+              <strong>24h</strong>
+              <span>تسليم سريع</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="scene">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+            <div class="product-model">
+              <div class="face front"></div>
+              <div class="face back"></div>
+              <div class="face top"></div>
+              <div class="face bottom"></div>
+              <div class="face left"></div>
+              <div class="face right"></div>
+              <div class="ring ring-one"></div>
+              <div class="ring ring-two"></div>
+              <div class="core"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" class="catalog container">
+        <div class="section-head">
+          <span class="tag">المنتجات</span>
+          <h2>منتجاتنا المميزة</h2>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-thumb thumb-one"></div>
+            <div class="product-content">
+              <div class="price-row">
+                <h3>Design Cube</h3>
+                <span>249 ر.س</span>
+              </div>
+              <p>مجسم ثلاثي الأبعاد أنيق مثالي للديكور الاحترافي.</p>
+              <button>إضافة إلى السلة</button>
+            </div>
+          </article>
+
+          <article class="product-card active">
+            <div class="product-thumb thumb-two"></div>
+            <div class="product-content">
+              <div class="price-row">
+                <h3>Orbit Lamp</h3>
+                <span>399 ر.س</span>
+              </div>
+              <p>مصباح ثلاثي الأبعاد بتصميم فني ومميز من الداخل والخارج.</p>
+              <button>إضافة إلى السلة</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-thumb thumb-three"></div>
+            <div class="product-content">
+              <div class="price-row">
+                <h3>Nova Stand</h3>
+                <span>319 ر.س</span>
+              </div>
+              <p>قاعدة عرض عصرية بتفاصيل هندسية متقدمة وتخطيط ثلاثي الأبعاد.</p>
+              <button>إضافة إلى السلة</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="features" class="features container">
+        <div class="section-head left">
+          <span class="tag">لماذا 3DLab؟</span>
+          <h2>تصميم يبرز المنتج أمام العين.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="icon">01</div>
+            <h3>تصميم ثلاثي الأبعاد</h3>
+            <p>نرسم المنتج بتفاصيل دقيقة تعطي ощущًا واقعيًا وجذابًا.</p>
           </div>
 
-          <div class="field">
-            <label for="video">الفيديو الأساسي</label>
-            <input id="video" name="video" type="file" accept="video/*" required />
+          <div class="feature-item">
+            <div class="icon">02</div>
+            <h3>مظهر احترافي</h3>
+            <p>واجهة أنيقة تناسب المتاجر الرقمية، العروض، والمشاريع الإعلانية.</p>
           </div>
 
-          <button type="submit" class="primary-btn">بدء الدمج</button>
-        </form>
+          <div class="feature-item">
+            <div class="icon">03</div>
+            <h3>تجربة تفاعلية</h3>
+            <p>تفاعل بصري يضيف قيمة للمنتج ويجعل الزائر يستمر في الاستعراض.</p>
+          </div>
+        </div>
+      </section>
 
-        <div id="status" class="status-box">جاهز لبدء المونتاج</div>
+      <section class="cta-banner container">
+        <div>
+          <span class="tag">ابدأ الآن</span>
+          <h2>أطلق منتجك في العالم الرقمي بأسلوب احترافي.</h2>
+        </div>
+        <a href="#contact" class="primary-btn">احجز استشارة مجانية</a>
+      </section>
+    </main>
 
-        <div id="resultBox" class="result-box hidden">
-          <video id="resultVideo" controls playsinline></video>
-          <a id="downloadLink" class="download-btn" target="_blank" rel="noreferrer">تحميل النتيجة</a>
+    <footer id="contact" class="footer">
+      <div class="container footer-wrap">
+        <div>
+          <div class="brand">
+            <div class="brand-mark">3D</div>
+            <span>3DLab</span>
+          </div>
+          <p>منتجات ثلاثية الأبعاد بأسلوب تصميم حديث ومميز.</p>
+        </div>
+
+        <div class="contact-box">
+          <p>info@3dlab.store</p>
+          <p>+966 55 000 0000</p>
         </div>
       </div>
-    </div>
+    </footer>
 
     <script src="/app.js"></script>
   </body>
