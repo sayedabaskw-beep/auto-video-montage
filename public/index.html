@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مونتاج تلقائي</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="card">
+        <div class="header">
+          <p class="eyebrow">Video Automation</p>
+          <h1>منصة المونتاج التلقائي</h1>
+        </div>
+
+        <form id="uploadForm" class="upload-form">
+          <div class="field">
+            <label for="logo">اللوجو (Logo)</label>
+            <input id="logo" name="logo" type="file" accept="image/*" required />
+          </div>
+
+          <div class="field">
+            <label for="intro">الفيديو التعريفي (Intro)</label>
+            <input id="intro" name="intro" type="file" accept="video/*" required />
+          </div>
+
+          <div class="field">
+            <label for="video">الفيديو الأساسي</label>
+            <input id="video" name="video" type="file" accept="video/*" required />
+          </div>
+
+          <button type="submit" class="primary-btn">بدء الدمج</button>
+        </form>
+
+        <div id="status" class="status-box">جاهز لبدء المونتاج</div>
+
+        <div id="resultBox" class="result-box hidden">
+          <video id="resultVideo" controls playsinline></video>
+          <a id="downloadLink" class="download-btn" target="_blank" rel="noreferrer">تحميل النتيجة</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

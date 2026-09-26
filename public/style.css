@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #0f172a, #111827 45%, #1e293b);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #e5e7eb;
+}
+
+.page-shell {
+  width: min(90vw, 760px);
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.35);
+  padding: 32px 28px;
+  backdrop-filter: blur(10px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.8;
+  color: #93c5fd;
+}
+
+h1 {
+  margin: 10px 0 0;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.upload-form {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+  color: #dbeafe;
+}
+
+input[type="file"] {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.6);
+  color: #f8fafc;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+input[type="file"]::file-selector-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.primary-btn,
+.download-btn {
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-btn:hover,
+.download-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.97;
+}
+
+.status-box {
+  margin-top: 18px;
+  min-height: 24px;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  color: #dbeafe;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-weight: 600;
+}
+
+.result-box {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+#resultVideo {
+  width: 100%;
+  border-radius: 14px;
+  background: #020617;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
